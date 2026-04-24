@@ -21,12 +21,12 @@ javac src/compilador/lexico/*.java
 ```
 
 2. **Execução**:
-Após compilar as classes, você pode usar a classe `Main` passando o arquivo fonte como argumento. A execução deve ser feita a partir da pasta `src/`:
+Após compilar as classes, ainda na raiz do projeto, executar::
 ```bash
-cd src/
-java compilador.lexico.Main ../testes/teste_01.txt
+java -cp src compilador.lexico.Main testes/teste_01.txt
 ```
 *(O analisador irá imprimir todos os `<Tokens>` e, em seguida, despejar o conteúdo da `Tabela de Símbolos`).*
+O argumento final é o arquivo de entrada a ser analisado. Para testar outros casos, basta trocar o nome do arquivo (por exemplo, teste_02.txt, teste_03.txt etc.).
 
 ## Boas Práticas
 - Foi utilizada a interface `Closeable` e blocos `try-with-resources` para evitar Resource Leaks.
