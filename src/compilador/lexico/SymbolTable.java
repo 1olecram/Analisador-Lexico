@@ -15,8 +15,6 @@ public class SymbolTable {
 
     /**
      * Insere uma palavra reservada ou identificador na tabela.
-     * @param s O lexema a ser inserido.
-     * @param w O token associado.
      */
     public void put(String s, Word w) {
         table.put(s, w);
@@ -24,8 +22,6 @@ public class SymbolTable {
 
     /**
      * Recupera um símbolo da tabela pelo seu lexema.
-     * @param s O lexema a ser buscado.
-     * @return O objeto Word associado ou null se não existir.
      */
     public Word get(String s) {
         return table.get(s);
